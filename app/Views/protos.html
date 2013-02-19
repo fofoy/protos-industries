@@ -6,18 +6,70 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
+	<base href="<?php echo $BASE; ?>/" />
 	<title>PROTOS Industries</title>
 	<meta name="description" content="">
 
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="public/css/protos.css" type="text/css" media="screen"  />
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<link rel="stylesheet" href="public/css/reset.css" type="text/css" media="screen"  />
+	<link rel="stylesheet" href="public/css/protos.css" type="text/css" media="screen"  />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="public/js/lib/modernizr-2.5.3.min.js"></script>
-  <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script type="text/javascript" src="public/js/protos.js"></script>
+	<!-- Temporary Script File for Three.js tests -->
+	<script type="text/javascript" src="public/js/lib/three.min.js"></script>
+	<script type="text/javascript" src="public/js/script.js"></script>
+	<!-- End Of Temporary Script File -->
+	<script type="text/javascript" src="public/js/lib/soundcloud.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	
 </head>
+
 <body>
-  
+	<div id="container"></div>
+	<img id="logo" src="public/images/protos_logo_final.png" height="200" width="270">
+
+	<nav>
+		<ul>
+			<li>
+				<div class="up-line"></div>
+				<div class="up-details_object">Lorem PSUMSUM</div>
+				<a href="#"><div class="hexagon">Object</div></a>
+			</li>
+			<li>
+				<div class="up-line"></div>
+				<div class="up-details_object">Lorem PSUMSUM</div>
+				<a href="#"><div class="hexagon">Object</div></a>
+			</li>
+			<li>
+				<div class="up-line"></div>
+				<div class="up-details_object">Lorem PSUMSUM</div>
+				<a href="#"><div class="hexagon">Object</div></a>
+			</li>
+		</ul>
+	</nav>
+	<nav>
+		<ul>
+			<li>
+				<div class="down-line"></div>
+				<div class="down-details_object">Lorem PSUMSUM</div>
+				<a href="#"><div class="hexagon">Object</div></a>
+			</li>
+			<li>
+				<div class="down-line"></div>
+				<div class="down-details_object">Lorem PSUMSUM</div>
+				<a href="#"><div class="hexagon">Object</div></a>
+			</li>
+			<li>
+				<div class="down-line"></div>
+				<div class="down-details_object">Lorem PSUMSUM</div>
+				<a href="#"><div class="hexagon">Object</div></a>
+			</li>
+		</ul>
+	</nav>
+	<footer>
+		<iframe width="580" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/tracks/79132898&amp;auto_play=true"></iframe>
+		<a href="">Mute</a>
+	</footer>
 </body>
 </html>

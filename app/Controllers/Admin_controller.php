@@ -1,16 +1,13 @@
 <?php
-class App_controller{
+class Admin_controller{
  
     function __construct(){
         
     }
  
-    function home(){
+    function dashboard(){
+        //F3::set('organ',Organ::instance()->getOrgans());
         echo Views::instance()->render('protos.html');
-    }
- 
-    function doc(){
-        echo Views::instance()->render('userref.html');
     }
  
     function __destruct(){
