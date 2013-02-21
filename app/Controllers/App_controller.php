@@ -12,7 +12,9 @@ class App_controller{
     function doc(){
         echo Views::instance()->render('userref.html');
     }
- 
+    function organ(){
+        echo Views::instance()->render('single.html');
+    }
     function __destruct(){
 
     }

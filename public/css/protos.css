@@ -2,6 +2,11 @@ iframe{
 	display: none;
 }
 
+header{
+	width:100%;
+	height:135px;
+}
+
 /* CANVAS BACKGROUND */
 #container{
 	position:absolute;
@@ -31,8 +36,6 @@ body {
 
 	font-family: 'Electrolize', sans-serif;
 }
-
-#logo{position:absolute;}
 
 nav {
 	position:absolute;
@@ -144,7 +147,27 @@ nav ul li a span {
 	border-right: 50px solid transparent;
 	border-top: 28px solid #000;
 }
+/* SINGLE ORGAN */
 
+#wrapper{
+	height:100px;
+	width:1200px;
+	margin:0 auto;
+}
+#organ_3d{
+	float:left;
+	background-color:red;
+	width:600px;
+	height:100%;
+}
+#organ_details{
+	float:left;
+	background-color:blue;
+	width:600px;
+	height:100%;
+}
+
+/* FOOTER */
 footer {
 	width: 100%;
 	height: 50px;
