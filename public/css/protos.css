@@ -42,7 +42,7 @@ nav {
 
 nav:nth-of-type(2){
 	top:350px;
-	left:370px;
+	left:360px;
 }
 
 nav ul li {
@@ -99,11 +99,23 @@ nav ul li:hover .up-details_object{display:block;}
 nav ul li:hover .down-line{display:block;}
 nav ul li:hover .down-details_object{display:block;}
 
+nav ul li a span {
+	background-image:url('img/blue_fond.png');
+	display: block;
+	width:58px;
+	height:90px;
+	position: absolute;
+
+	top:0;
+	right:5px;
+	z-index:1;
+}
+
 .hexagon {
 	width: 100px;
 	height: 45px;
 	background: #000;
-
+	position:relative;
 	color:white;
 	text-align:center;
 	padding-top:20px;
@@ -113,24 +125,24 @@ nav ul li:hover .down-details_object{display:block;}
 .hexagon:before {
 	content: "";
 	position: absolute;
-	top: -25px;
+	top: -30px;
 	left: 0;
 	width: 0;
 	height: 0;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
-	border-bottom: 25px solid #000;
+	border-bottom: 30px solid #000;
 }
 .hexagon:after {
 	content: "";
 	position: absolute;
-	bottom: -25px;
+	bottom: -28px;
 	left: 0;
 	width: 0;
 	height: 0;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
-	border-top: 25px solid #000;
+	border-top: 28px solid #000;
 }
 
 footer {

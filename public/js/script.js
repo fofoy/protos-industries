@@ -18,7 +18,7 @@ camera.lookAt(new THREE.Vector3(0,0,0));
 
 var geometry = new THREE.Geometry();
 
-for ( var i = 0; i < 90; i ++ ) {
+for ( var i = 0; i < 50; i ++ ) {
 
 	particle = new THREE.Particle( new THREE.ParticleCanvasMaterial( {
 
