@@ -150,21 +150,60 @@ nav ul li a span {
 /* SINGLE ORGAN */
 
 #wrapper{
-	height:100px;
+	height:500px;
 	width:1200px;
 	margin:0 auto;
 }
 #organ_3d{
 	float:left;
-	background-color:red;
+	
 	width:600px;
 	height:100%;
 }
 #organ_details{
-	float:left;
-	background-color:blue;
-	width:600px;
+	float:right;
+	background-color: rgba(21,23,28,0.9);
+	width:500px;
 	height:100%;
+
+	padding:15px;
+
+	color:#fff;
+}
+
+#organ_details h2 {
+	width:100%;
+	font-size:2.2em;
+
+	padding:10px 0 10px 0;
+
+	border-bottom:1px solid black;
+}
+
+#organ_details ul {
+	width:100%;
+	font-size:1.6em;
+	padding:20px 0 10px 0;
+
+	border-top:1px solid #292c33;
+}
+#organ_details ul li {
+	width:100%;
+	padding:10px 0 10px 0;
+}
+#organ_details ul li p:nth-child(1){
+	padding:5px 0 8px 0;
+}
+#organ_details ul li input{
+	width:200px;
+}
+
+#organ_details ul li span{
+	padding: 0 5px 0 5px;
+}
+.atr_price{
+	font-size:1.4em;
+	float:right;
 }
 
 /* FOOTER */
