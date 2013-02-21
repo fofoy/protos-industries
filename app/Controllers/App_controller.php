@@ -8,6 +8,10 @@ class App_controller{
     function home(){
         echo Views::instance()->render('protos.html');
     }
+
+    function signup(){
+        echo Views::instance()->render('signup.html');
+    }
  
     function doc(){
         echo Views::instance()->render('userref.html');
