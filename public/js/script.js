@@ -1,5 +1,6 @@
 $(function(){
 
+
 var container = document.getElementById('container');
 var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,1,10000);
 var distance = 1000; 
@@ -17,19 +18,36 @@ camera.lookAt(new THREE.Vector3(0,0,0));
 
 var geometry = new THREE.Geometry();
 
-for ( var i = 0; i < 150; i ++ ) {
+for ( var i = 0; i < 90; i ++ ) {
 
 	particle = new THREE.Particle( new THREE.ParticleCanvasMaterial( {
 
 		color:  0x0000000, //Math.random() * 0x808080 + 0x808080,
 		opacity: 0.1,
 		program: function ( context ) {
-			
+			/*
 			context.beginPath();
 			context.arc( 0, 0, 5 , 0, Math.PI * 2, true );
 			context.closePath();
 			context.fill();
-			
+			*/
+
+				// hexagon
+		var numberOfSides = 6,
+		    size = 10,
+		    Xcenter = 0,
+		    Ycenter = 0;
+		 
+		context.beginPath();
+		context.moveTo (Xcenter +  size * Math.cos(0), Ycenter +  size *  Math.sin(0));          
+		 
+		for (var i = 1; i <= numberOfSides;i += 1) {
+		context.lineTo (Xcenter + size * Math.cos(i * 2 * Math.PI / numberOfSides), Ycenter + size * Math.sin(i * 2 * Math.PI / numberOfSides));
+		}
+		context.strokeStyle = "#000000";
+		context.lineWidth = 1;
+		context.fill();
+		context.stroke();
 		}
 
 	} ) );
@@ -43,12 +61,21 @@ for ( var i = 0; i < 150; i ++ ) {
 
 }
 
-var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0x000000, opacity: 0.05 } ) );
+var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0xffffff, opacity: 0.02 } ) );
 scene.add( line );
 
 renderer.render( scene, camera );
 
-document.addEventListener( 'mousemove', onMouseMove, false );
+//document.addEventListener( 'mousemove', onMouseMove, false );
+setInterval(changeBackground,10);
+
+function changeBackground(event){
+	var timer = new Date().getTime() * 0.0001;
+  	camera.position.x = Math.floor(Math.cos( timer ) * 600);
+  	camera.position.y = Math.floor(Math.sin( timer ) * 800);
+	camera.lookAt(new THREE.Vector3(0,0,0));
+	renderer.render( scene, camera );
+}
 
 function onMouseMove(event){
 	mouseX = (event.clientX - window.innerWidth/2) / window.innerWidth/2;
@@ -58,6 +85,8 @@ function onMouseMove(event){
 	camera.lookAt(new THREE.Vector3(0,0,0));
 	renderer.render( scene, camera );
 }
+
+
 
 	
 });
