@@ -7,6 +7,16 @@ header{
 	height:135px;
 }
 
+nav {
+	width:100%;
+	height:100%;
+
+	font-size:2em;
+	color:white;
+}
+nav ul li {
+	display:inline-block;
+}
 /* CANVAS BACKGROUND */
 #container{
 	position:absolute;
@@ -37,25 +47,25 @@ body {
 	font-family: 'Electrolize', sans-serif;
 }
 
-nav {
+.nav_organes {
 	position:absolute;
 	top:250px;
 	left:300px;
 }
 
-nav:nth-of-type(2){
+.nav_organes:nth-of-type(2){
 	top:350px;
 	left:360px;
 }
 
-nav ul li {
+.nav_organes ul li {
 	opacity: 0.6;
 	position:relative;
 	float:left;
 	margin:10px;
 }
 
-nav ul li:hover{opacity:1;}
+.nav_organes ul li:hover{opacity:1;}
 
 .up-details_object, .down-details_object{
 	width:100px;
@@ -96,13 +106,13 @@ nav ul li:hover{opacity:1;}
     margin-left:-185px;
 }
 
-nav ul li:hover .up-line{display:block;}
-nav ul li:hover .up-details_object{display:block;}
+.nav_organes ul li:hover .up-line{display:block;}
+.nav_organes ul li:hover .up-details_object{display:block;}
 
-nav ul li:hover .down-line{display:block;}
-nav ul li:hover .down-details_object{display:block;}
+.nav_organes ul li:hover .down-line{display:block;}
+.nav_organes ul li:hover .down-details_object{display:block;}
 
-nav ul li a span {
+.nav_organes ul li a span {
 	background-image:url('img/blue_fond.png');
 	display: block;
 	width:58px;
