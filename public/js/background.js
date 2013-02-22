@@ -4,7 +4,7 @@ $(function(){
 var container = document.getElementById('container');
 var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,1,10000);
 var distance = 1000; 
-camera.position.z = distance-100;
+camera.position.z = distance;
 
 var scene = new THREE.Scene();
 scene.add(camera);
@@ -18,12 +18,12 @@ camera.lookAt(new THREE.Vector3(0,0,0));
 
 var geometry = new THREE.Geometry();
 
-for ( var i = 0; i < 50; i ++ ) {
+for ( var i = 0; i < 90; i ++ ) {
 
 	particle = new THREE.Particle( new THREE.ParticleCanvasMaterial( {
 
-		color:  0x0000000, //Math.random() * 0x808080 + 0x808080,
-		opacity: 0.1,
+		color:  0xffffff, //Math.random() * 0x808080 + 0x808080,
+		opacity: 0.025,
 		program: function ( context ) {
 			/*
 			context.beginPath();
@@ -44,7 +44,7 @@ for ( var i = 0; i < 50; i ++ ) {
 		for (var i = 1; i <= numberOfSides;i += 1) {
 		context.lineTo (Xcenter + size * Math.cos(i * 2 * Math.PI / numberOfSides), Ycenter + size * Math.sin(i * 2 * Math.PI / numberOfSides));
 		}
-		context.strokeStyle = "#000000";
+		context.strokeStyle = "#ffffff";
 		context.lineWidth = 1;
 		context.fill();
 		context.stroke();

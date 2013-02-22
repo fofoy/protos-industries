@@ -28,15 +28,8 @@ nav ul li {
 	height:100%;
 	overflow:hidden;
 
-	background: #131821; /* Old browsers */
-	background: -moz-linear-gradient(top,  #131821 0%, #181626 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#131821), color-stop(100%,#181626)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #131821 0%,#181626 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #131821 0%,#181626 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #131821 0%,#181626 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #131821 0%,#181626 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131821', endColorstr='#181626',GradientType=0 ); /* IE6-9 */
-
+	background: #262B3A; /* Old browsers */
+	
 }
 
 body {
@@ -169,6 +162,16 @@ body {
 	
 	width:600px;
 	height:100%;
+
+	cursor:pointer;
+}
+
+#rotate_control{
+	display:block;
+	background-color:white;
+	height:25px;
+	width:25px;
+	float:left;
 }
 #organ_details{
 	float:right;
