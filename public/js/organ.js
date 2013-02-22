@@ -1,5 +1,6 @@
 $(function(){
-/* 1. SCENE */
+
+	/* 1. SCENE */
 var $container = $('#organ_3d');
 	var WIDTH = 600,
 	    HEIGHT = 500;
@@ -11,8 +12,17 @@ var scene = new THREE.Scene();
 /* 2. CAMERA */
 
 var camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, 0.1, 1000);
-camera.position.set(0,0,-1);
+camera.position.set(0,0,-6);
+controls = new THREE.TrackballControls( camera );
 
+controls.rotateSpeed = 3.0;
+controls.zoomSpeed = 1.2;
+controls.panSpeed = 0.8;
+controls.noZoom = false;
+controls.noPan = false;
+controls.staticMoving = true;
+controls.dynamicDampingFactor = 0.3;
+controls.keys = [ 65, 83, 68 ];
 
 /* 3. OBJECTS */
 
@@ -21,7 +31,7 @@ loader.options.convertUpAxis = true;
 loader.load( 'public/models/brain.dae', function (model) {
 	var organ = model.scene;
 	//organ.scale.set(0.2,0.2,0.2);
-	organ.position.set(30,6,-10);
+	organ.position.set(0,0,0);
 	organ.rotation.set(Math.PI/8,Math.PI/4,0);
 	scene.add(organ);
 });
@@ -31,6 +41,9 @@ loader.load( 'public/models/brain.dae', function (model) {
 var directionalLight = new THREE.DirectionalLight(0xFFFFFF, 1); 
 	directionalLight.position.set(-5,1,-10); 
 scene.add(directionalLight);
+var directionalLight2 = new THREE.DirectionalLight(0xFFFFFF, 1); 
+	directionalLight2.position.set(5,-1,10); 
+scene.add(directionalLight2);
 
 
 /* 5. RENDERER */
@@ -39,45 +52,17 @@ var renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize(WIDTH, HEIGHT);
 $container.append(renderer.domElement);
 
-document.addEventListener( 'mousemove', onMouseMove, false );
+animate();
 
-function onMouseMove(event){
-	mouseX = (event.clientX - WIDTH/2) / WIDTH/2;
-	mouseY = (event.clientY - HEIGHT/2) / HEIGHT/2;
-	camera.position.x = Math.sin(mouseX * Math.PI);
-	camera.position.y = - Math.sin(mouseY * Math.PI);
-	camera.lookAt(new THREE.Vector3(0,0,0));
-	camera.lookAt(organ.position); 
-	renderer.render( scene, camera );
+function animate() {
+	render();
+	requestAnimationFrame( animate );
+	controls.update();
 }
 
-function render() { 
-	requestAnimationFrame(render);
-	if(rotate){
-		var timer = Date.now() * 0.0015;
-		camera.position.x  = Math.cos(timer) * 65;
-		camera.position.z  = Math.sin(timer) * 65;
-	}
-	camera.lookAt(scene.position); 
-	renderer.render(scene, camera); 
-} 
-
-render();
-
-
-
-
-/* CONTROL */
-
-var rotate = false;
-
-/*
-document.addEventListener('mousemove', function(e){
-	var mouseX = e.clientX - window.innerWidth/2;
-	camera.position.set(mouseX/10, 0, 15);
-})
-*/
-
+function render() {
+	renderer.render( scene, camera );
+}
 
 
 });
