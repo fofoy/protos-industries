@@ -36,8 +36,8 @@
 			<fieldset>
 				<h3>Your informations</h3>
 				<label for="hid">My H.iD is:</label><input type="text" name="hid" id="hid" placeholder="Enter your H.iD" required>
-				<label for="email">E-mail address:</label><input type="email" name="email" id="email" placeholder="E-mail address" required>
-				<label for="email_repeat">Type it again:</label><input type="email" name="email_repeat" id="email_repeat" placeholder="Repeat E-mail address" required>
+				<label for="email">E-mail address:</label><input type="email" name="email" id="email" placeholder="E-mail address" value="<?php echo $email ?>" required>
+				<label for="email_repeat">Type it again:</label><input type="email" name="email_repeat" id="email_repeat" placeholder="Repeat E-mail address" value="<?php echo $email ?>" required>
 
 				<h3>Protect your account</h3>
 				<label for="password">Enter a password:</label><input type="password" name="password" id="password" placeholder="Password" required>

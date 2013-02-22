@@ -36,7 +36,19 @@ class App_controller{
     }
 
     function signin(){
-        echo Views::instance()->render('signin.html');
+        switch(F3::get('VERB')){
+            case 'GET':
+                echo Views::instance()->render('signin.html');
+            break;
+            case 'POST':
+                if(isset($_POST['email']) && $_POST['account_choice'] == 'no'){
+                    F3::set('email',$_POST['email']);
+                    echo Views::instance()->render('signup.html');
+                } else {
+                    // AUTH
+                }
+            break;
+        }
     }
  
     function doc(){
