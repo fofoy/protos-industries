@@ -206,6 +206,81 @@ nav ul li a span {
 	float:right;
 }
 
+/* SIGN IN / SIGN UP */
+#signin {
+	background-color: rgba(21,23,28,0.9);
+	width:500px;
+	height:100%;
+	margin: 0 auto;
+	padding:15px;
+
+	color:#fff;
+}
+
+#signin h2 {
+	font-size:2.2em;
+
+	padding:10px 0 10px 0;
+
+	border-bottom:1px solid black;
+}
+
+#signin fieldset {
+	border-top:1px solid #292c33;
+	border-bottom:1px solid black;
+}
+
+#signin fieldset:last-child {
+	border-bottom: 0;
+	padding-top: 2em;
+	text-align: center;
+}
+
+#signin h3 {
+	font-size: 1.8em;
+	margin: 1em 0 .5em;
+}
+
+#signin label {
+	display: inline-block;
+	width: 25%;
+	padding-right: 1em;
+	font-size: 1.4em;
+	text-align: right;
+	color: #aabad2;
+}
+
+#signin input {
+	width: 60%;
+	display: inline-block;
+	padding: .5em .5em;
+	margin-bottom: 1em;
+	color: #4f5153;
+	border: 1px solid #16181d;
+	font-size: 1.4em;
+}
+
+#signin input[type="submit"] {
+	display: inline-block;
+	width: 50%;
+	margin: 0 auto;
+	cursor: pointer;
+	color: #e6f4fc;
+	background: #2a384e;
+	border: 1px solid #2a384e;
+	text-shadow: 1px 1px 0 #121821;
+	box-shadow: 0 2px 0 #161926;
+}
+
+#signin .signin label{
+	width: 35%;
+	text-align: left;
+}
+
+#signin input[type="radio"]{
+	width: 10%;
+}
+
 /* FOOTER */
 footer {
 	width: 100%;

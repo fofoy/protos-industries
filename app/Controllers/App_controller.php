@@ -34,6 +34,10 @@ class App_controller{
             break;
         }
     }
+
+    function signin(){
+        echo Views::instance()->render('signin.html');
+    }
  
     function doc(){
         echo Views::instance()->render('userref.html');

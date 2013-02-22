@@ -31,20 +31,18 @@
 	<img id="logo" src="public/images/protos_logo_final.png" height="200" width="270">
 
 	<div id="signin">
-		<h2>Sign up</h2>
+		<h2>Sign in</h2>
 		<form action="" method="post" autocomplete="off">
-			<fieldset>
-				<h3>Your informations</h3>
-				<label for="hid">My H.iD is:</label><input type="text" name="hid" id="hid" placeholder="Enter your H.iD" required>
+			<fieldset class="signin">
+				<h3>Please enter your email address</h3>
 				<label for="email">E-mail address:</label><input type="email" name="email" id="email" placeholder="E-mail address" required>
-				<label for="email_repeat">Type it again:</label><input type="email" name="email_repeat" id="email_repeat" placeholder="Repeat E-mail address" required>
-
-				<h3>Protect your account</h3>
-				<label for="password">Enter a password:</label><input type="password" name="password" id="password" placeholder="Password" required>
-				<label for="password_repeat">Type it again:</label><input type="password" name="password" id="password_repeat" placeholder="Repeat Password" required>
+				
+				<h3>Do you have a ProtosInd.com password?</h3>
+				<label for="no">No, I am a new customer:</label><input type="radio" name="account_choice" id="no">
+				<label for="yes">Yes, I have a password:</label><input type="radio" name="account_choice" id="yes"><input type="password" name="password" placeholder="Password">
 			</fieldset>
 			<fieldset>
-				<input type="submit" value="Create Account">
+				<input type="submit" value="Sign in">
 			</fieldset>
 		</form>
 	</div>
