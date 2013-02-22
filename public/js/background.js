@@ -45,7 +45,7 @@ for ( var i = 0; i < 90; i ++ ) {
 		context.lineTo (Xcenter + size * Math.cos(i * 2 * Math.PI / numberOfSides), Ycenter + size * Math.sin(i * 2 * Math.PI / numberOfSides));
 		}
 		context.strokeStyle = "#ffffff";
-		context.lineWidth = 1;
+		context.lineWidth = 0.2;
 		context.fill();
 		context.stroke();
 		}
