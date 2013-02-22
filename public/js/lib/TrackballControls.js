@@ -1,6 +1,9 @@
 /**
  * @author Eberhard Graether / http://egraether.com/
  */
+$(function(){
+
+var windowwebgl = document.getElementById('organ_3d');
 
 THREE.TrackballControls = function ( object, domElement ) {
 
@@ -10,7 +13,7 @@ THREE.TrackballControls = function ( object, domElement ) {
 	var STATE = { NONE: -1, ROTATE: 0, ZOOM: 1, PAN: 2, TOUCH_ROTATE: 3, TOUCH_ZOOM: 4, TOUCH_PAN: 5 };
 
 	this.object = object;
-	this.domElement = ( domElement !== undefined ) ? domElement : document;
+	this.domElement = ( domElement !== undefined ) ? domElement : windowwebgl;
 
 	// API
 
@@ -344,8 +347,8 @@ THREE.TrackballControls = function ( object, domElement ) {
 
 		}
 
-		document.addEventListener( 'mousemove', mousemove, false );
-		document.addEventListener( 'mouseup', mouseup, false );
+		windowwebgl.addEventListener( 'mousemove', mousemove, false );
+		windowwebgl.addEventListener( 'mouseup', mouseup, false );
 
 	}
 
@@ -381,8 +384,8 @@ THREE.TrackballControls = function ( object, domElement ) {
 
 		_state = STATE.NONE;
 
-		document.removeEventListener( 'mousemove', mousemove );
-		document.removeEventListener( 'mouseup', mouseup );
+		windowwebgl.removeEventListener( 'mousemove', mousemove );
+		windowwebgl.removeEventListener( 'mouseup', mouseup );
 
 	}
 
@@ -510,3 +513,4 @@ THREE.TrackballControls = function ( object, domElement ) {
 	this.handleResize();
 
 };
+});
