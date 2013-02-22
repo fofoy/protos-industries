@@ -22,15 +22,14 @@ class App_controller{
                     echo Views::instance()->render('signup.html');
                     return;
                 }
-                /*if($user=Admin::instance()->login(F3::get('POST.userName'),F3::get('POST.pw'))){
-                    F3::set('SESSION.userId',$user->id);
-                    F3::set('SESSION.firstname',$user->firstname);
-                    F3::set('SESSION.lastname',$user->lastname);
-                    F3::reroute('/admin/dashboard');
+                if($user=App::instance()->login(F3::get('POST.email'),F3::get('POST.password'))){
+                    F3::set('SESSION.id',$user->id);
+                    F3::set('SESSION.email',$user->email);
+                    F3::reroute('/');
                     return;
-                }*/
+                }
                 App::instance()->signup();
-                F3::reroute('/admin');
+                F3::reroute('/');
             break;
         }
     }
@@ -45,7 +44,12 @@ class App_controller{
                     F3::set('email',$_POST['email']);
                     echo Views::instance()->render('signup.html');
                 } else {
-                    // AUTH
+                    if($user=App::instance()->login(F3::get('POST.email'),F3::get('POST.password'))){
+                        F3::set('SESSION.id',$user->id);
+                        F3::set('SESSION.email',$user->email);
+                        echo Views::instance()->render('single.html');
+                        return;
+                    }
                 }
             break;
         }

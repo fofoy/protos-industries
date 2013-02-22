@@ -19,6 +19,11 @@ class App extends Prefab{
     	$user->save();
     }
 
+    function login($id,$pw){
+        $user=new DB\SQL\Mapper(F3::get('dB'),'user');
+        return $user->load(array('email=? and password=?',$id,md5($pw)));
+    }
+
     function __destruct(){
     	
     }
