@@ -14,7 +14,7 @@ var scene = new THREE.Scene();
 /* 2. CAMERA */
 
 var camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, 0.1, 1000);
-camera.position.set(0,0,-6);
+camera.position.set(0,0,-8);
 controls = new THREE.TrackballControls( camera );
 
 controls.rotateSpeed = 3.0;
@@ -30,7 +30,7 @@ controls.keys = [ 65, 83, 68 ];
 var organ;
 var loader = new THREE.ColladaLoader();
 loader.options.convertUpAxis = true;
-loader.load( 'public/models/brain.dae', function (model) {
+loader.load( 'public/models/robot_hand.dae', function (model) {
 	organ = model.scene;
 	//organ.scale.set(0.2,0.2,0.2);
 	organ.position.set(0,0,0);
