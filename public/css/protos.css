@@ -39,11 +39,41 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a384c', end
 }
 
 body {
+	height: 100%;
 	margin:0;
 	padding:0;
 	font-size: 62.5%;
 
 	font-family: 'Electrolize', sans-serif;
+}
+
+header {
+	position: relative;
+}
+
+#logo {
+	position: absolute;
+	left: 0;
+	top: 1em;
+}
+
+.user_actions {
+	display: table;
+}
+
+.user_actions a{
+	display: inline-block;
+	height: 40px;
+	font-size: 1.3em;
+	color: #FFF;
+	position: absolute;
+	right: 0;
+	top: 4em;
+}
+
+.user_actions a span {
+	display: block;
+	font-size: 1.3em;
 }
 
 .nav_organes {
@@ -229,7 +259,6 @@ body {
 #signin {
 	background-color: rgba(21,23,28,0.9);
 	width:500px;
-	height:100%;
 	margin: 0 auto;
 	padding:15px;
 
@@ -291,13 +320,17 @@ body {
 	box-shadow: 0 2px 0 #161926;
 }
 
-#signin .signin label{
+#signin .signin label {
 	width: 35%;
 	text-align: left;
 }
 
 #signin input[type="radio"]{
 	width: 10%;
+}
+
+#password_disabled[disabled="disabled"] {
+	background-color: #969696;
 }
 
 /* FOOTER */

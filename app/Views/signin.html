@@ -28,8 +28,21 @@
 
 <body>
 	<div id="container"></div>
-	<img id="logo" src="public/images/protos_logo_final.png" height="200" width="270">
-
+	<div id="wrapper">
+		<header>
+			<nav>
+				<ul>
+					<li>Item 1</li><li>Item 2</li><li>Item 3</li>
+				</ul>
+			</nav>
+			<div class="user_actions">
+				<a href="">
+					Hello, please login<br>
+					<span>Your account</span>
+				</a>
+			</div>
+			<img id="logo" src="public/images/protos_logo_final.png" height="200" width="270">
+		</header>
 	<div id="signin">
 		<h2>Sign in</h2>
 		<form action="" method="post" autocomplete="off">
@@ -39,14 +52,14 @@
 				
 				<h3>Do you have a ProtosInd.com password?</h3>
 				<label for="no">No, I am a new customer:</label><input type="radio" name="account_choice" id="no" value="no">
-				<label for="yes">Yes, I have a password:</label><input type="radio" name="account_choice" id="yes" value="yes"><input type="password" name="password" placeholder="Password">
+				<label for="yes">Yes, I have a password:</label><input type="radio" name="account_choice" id="yes" value="yes"><input type="password" name="password" id="password_disabled" placeholder="Password" disabled="disabled">
 			</fieldset>
 			<fieldset>
 				<input type="submit" value="Sign in">
 			</fieldset>
 		</form>
 	</div>
-
+	</div>
 	<footer>
 		<iframe width="580" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/tracks/79132898&amp;auto_play=true"></iframe>
 		<a href="">Mute</a>

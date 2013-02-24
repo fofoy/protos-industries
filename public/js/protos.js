@@ -16,5 +16,13 @@ $(function(){
         $(this).toggleClass('muted');
         return false;
     });
+
+    // Toggle on the disabled password input
+    $('#yes').bind('click',function(){
+        $(this).next().attr('disabled',false);
+    });
+    $('#no').bind('click',function(){
+        $('#password_disabled').attr('disabled',true);
+    });
     
 });
