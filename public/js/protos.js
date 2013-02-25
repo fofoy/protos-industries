@@ -25,4 +25,15 @@ $(function(){
         $('#password_disabled').attr('disabled',true);
     });
     
+    // Toggle on the disabled password input
+    $('#a_perso').click(function(){
+        $('#organ_resume').hide();
+        $('#organ_perso').show();
+    });
+
+    $('#a_resume').click(function(){
+        $('#organ_perso').hide();
+        $('#organ_resume').show();
+    });
+    $('#organ_perso').hide();
 });

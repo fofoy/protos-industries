@@ -202,6 +202,8 @@ body {
 	border-right: 50px solid transparent;
 	border-top: 28px solid #000;
 }
+
+/*FIN HOME */
 /* SINGLE ORGAN */
 
 #wrapper{
@@ -209,6 +211,8 @@ body {
 	width:1200px;
 	margin:0 auto;
 }
+
+/* WINDOW 3D*/
 #organ_3d{
 	float:left;
 	
@@ -217,7 +221,6 @@ body {
 
 	cursor:pointer;
 }
-
 #rotate_control{
 	display:block;
 	background-color:white;
@@ -225,24 +228,43 @@ body {
 	width:25px;
 	float:left;
 }
+
+/* PANNEAU DETAILS*/
 #organ_details{
 	float:right;
 	background-color: rgba(21,23,28,0.9);
 	width:500px;
-	height:100%;
 
 	padding:15px;
-
 	color:#fff;
 }
 
 #organ_details h2 {
-	width:100%;
 	font-size:2.2em;
-
 	padding:10px 0 10px 0;
+	
+	display:inline-block;
+}
 
-	border-bottom:1px solid black;
+#organ_details > p {
+	font-size:1.6em;
+	color:white;
+	display: inline-block;
+	float:right;
+	margin-left:20px;
+	cursor: pointer;
+
+	padding:5px;
+	color: #e6f4fc;
+	background: #2a384e;
+	border: 1px solid #2a384e;
+	text-shadow: 1px 1px 0 #121821;
+	box-shadow: 0 2px 0 #161926;
+}
+
+#organ_resume p {
+	font-size:1.4em;
+	padding:10px;
 }
 
 #organ_details ul {
