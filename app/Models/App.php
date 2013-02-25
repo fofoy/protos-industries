@@ -24,6 +24,11 @@ class App extends Prefab{
         return $user->load(array('email=? and password=?',$id,md5($pw)));
     }
 
+    function getOrgan($id){
+        $organ=new DB\SQL\Mapper(F3::get('dB'),'organ');
+        return $organ->load(array('id=?',$id));
+    }
+
     function __destruct(){
     	
     }

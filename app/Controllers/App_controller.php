@@ -60,8 +60,18 @@ class App_controller{
     }
 
     function organ(){
+        $id=F3::get('PARAMS.id');
+        $organ=App::instance()->getOrgan($id);
+        if(!$organ){
+            F3::error('404');
+            return;
+        }
+        $ajax['model']=$organ->model;
+        echo json_encode($ajax);
+        F3::set('organ',$organ);
         echo Views::instance()->render('single.html');
     }
+
     function __destruct(){
 
     }
