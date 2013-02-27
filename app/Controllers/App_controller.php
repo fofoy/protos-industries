@@ -63,6 +63,10 @@ class App_controller{
         echo Views::instance()->render('account.html');
     }
 
+    function basket_test(){
+        echo Views::instance()->render('basket_test.html');
+    }
+
     function organ(){
         $id=F3::get('PARAMS.id');
         $organ=App::instance()->getOrgan($id);
