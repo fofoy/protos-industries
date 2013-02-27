@@ -480,14 +480,16 @@ body {
 #account_history{float:right;}
 
 /* BASKET */
-#basket {
+#basket, #purchased {
 	width:800px;
 	margin:0 auto;
 	background-color: rgba(21,23,28,0.9);
 	padding:15px;
 	color:#fff;
 }
-
+#basket ul{
+	border-bottom:1px solid #292c33;
+}
 #basket img{
 	height:100px;
 	width:100px;
@@ -534,6 +536,37 @@ body {
 #basket ul li div a{
 	color:#aabad2;
 	font-size: 1rem;
+}
+
+#basket input[type="submit"] {
+	display: block;
+	width: 200px;
+	padding: .5em .5em;
+	margin: 0 auto;
+	margin-top:15px;
+	cursor: pointer;
+	color: #e6f4fc;
+	background: #2a384e;
+	border: 1px solid #2a384e;
+	text-shadow: 1px 1px 0 #121821;
+	box-shadow: 0 2px 0 #161926;
+	font-size: 1.4em;
+}
+
+/* PURCHASED BPX*/
+
+#purchased img {
+	width:350px;
+	display:block;
+	margin:0 auto;
+}
+
+#purchased p {
+	width:420px;
+	font-size:1.4em;
+	text-align:center;
+	margin:0 auto;
+	padding:10px 0 10px 0;
 }
 
 /* FOOTER */
