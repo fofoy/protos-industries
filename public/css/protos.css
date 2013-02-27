@@ -52,13 +52,7 @@ nav ul li a {
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease;
 }
-#lavalamp:hover {
-    -moz-transition-duration: 3000s;
-    -ms-transition-duration: 3000s;
-    -o-transition-duration: 3000s;
-    -webkit-transition-duration: 3000s;
-    transition-duration: 3000s;
-}
+
 nav ul li:nth-of-type(1):hover ~ #lavalamp {
     left: 13px;
 }
@@ -79,14 +73,14 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 	height:100%;
 	overflow:hidden;
 
-background: #1a384c; /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover,  #1a384c 0%, #1b212b 100%); /* FF3.6+ */
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#1a384c), color-stop(100%,#1b212b)); /* Chrome,Safari4+ */
-background: -webkit-radial-gradient(center, ellipse cover,  #1a384c 0%,#1b212b 100%); /* Chrome10+,Safari5.1+ */
-background: -o-radial-gradient(center, ellipse cover,  #1a384c 0%,#1b212b 100%); /* Opera 12+ */
-background: -ms-radial-gradient(center, ellipse cover,  #1a384c 0%,#1b212b 100%); /* IE10+ */
-background: radial-gradient(ellipse at center,  #1a384c 0%,#1b212b 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a384c', endColorstr='#1b212b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background: #1a384c; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #1a384c 0%, #1b212b 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#1a384c), color-stop(100%,#1b212b)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #1a384c 0%,#1b212b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #1a384c 0%,#1b212b 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #1a384c 0%,#1b212b 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #1a384c 0%,#1b212b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a384c', endColorstr='#1b212b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 body {
@@ -147,7 +141,6 @@ body {
 }
 
 .nav_organes ul li:hover{opacity:1;}
-
 .up-details_object, .down-details_object{
 	width:100px;
 	color:white;
@@ -171,11 +164,23 @@ body {
 .up-line, .down-line{
 	position:absolute;
     width: 1px;
-    height: 200px;
+    height: 0px;
     -webkit-transform: translate(100px, 0px) rotate(60deg);
     -moz-transform: translate(100px, 0px) rotate(60deg);
     background-color: #fff;
-    display: none;
+   	display:block;
+
+    -webkit-transition-property: height;
+	-webkit-transition-duration: 0.1s;
+	-webkit-transition-timing-function: ease-out;
+	
+     -moz-transition-property: height;
+	-moz-transition-duration: 0.1s;
+	-moz-transition-timing-function: ease-out;
+	
+	transition-property: height;
+	transition-duration: 0.1s;
+	transition-timing-function: ease-out;
 }
 .up-line {
     margin-top:-175px;
@@ -187,10 +192,10 @@ body {
     margin-left:-185px;
 }
 
-.nav_organes ul li:hover .up-line{display:block;}
+.nav_organes ul li:hover .up-line{display:block;height: 200px;}
 .nav_organes ul li:hover .up-details_object{display:block;}
 
-.nav_organes ul li:hover .down-line{display:block;}
+.nav_organes ul li:hover .down-line{display:block;height: 200px;}
 .nav_organes ul li:hover .down-details_object{display:block;}
 
 .nav_organes ul li a span {
@@ -216,6 +221,7 @@ body {
 
 	font-size:1.8em;
 }
+
 .hexagon:before {
 	content: "";
 	position: absolute;
