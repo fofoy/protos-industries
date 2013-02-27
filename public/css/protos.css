@@ -206,7 +206,6 @@ body {
 /* SINGLE ORGAN */
 
 #wrapper{
-	height:500px;
 	width:1200px;
 	margin:0 auto;
 }
@@ -308,7 +307,7 @@ body {
 	color:#fff;
 }
 
-#signin h2 {
+#signin h2 ,#account h2 {
 	font-size:2.2em;
 
 	padding:10px 0 10px 0;
@@ -316,23 +315,23 @@ body {
 	border-bottom:1px solid black;
 }
 
-#signin fieldset {
+#signin h3, #account h3 {
+	font-size: 1.8em;
+	margin: 1em 0 .5em;
+}
+
+#signin fieldset, #account fieldset{
 	border-top:1px solid #292c33;
 	border-bottom:1px solid black;
 }
 
-#signin fieldset:last-child {
+#signin fieldset:last-child, #account fieldset:last-child{
 	border-bottom: 0;
 	padding-top: 2em;
 	text-align: center;
 }
 
-#signin h3 {
-	font-size: 1.8em;
-	margin: 1em 0 .5em;
-}
-
-#signin label {
+#signin label, #account label{
 	display: inline-block;
 	width: 25%;
 	padding-right: 1em;
@@ -341,7 +340,7 @@ body {
 	color: #aabad2;
 }
 
-#signin input {
+#signin input, #account input{
 	width: 60%;
 	display: inline-block;
 	padding: .5em .5em;
@@ -375,6 +374,31 @@ body {
 #password_disabled[disabled="disabled"] {
 	background-color: #969696;
 }
+
+/* ACCOUNT / HISTORY */
+
+#account {
+	width:800px;
+	margin:0 auto;
+}
+#account p {
+	padding-right: 1em;
+	padding-top:0.5em;
+	font-size: 1.4em;
+	color: #aabad2;
+}
+#account p span {
+	color: #fff;
+}
+
+#account_details, #account_history{
+	background-color: rgba(21,23,28,0.9);
+	width:360px;
+	padding:15px;
+	color:#fff;
+}
+#account_details{float:left;}
+#account_history{float:right;}
 
 /* FOOTER */
 footer {
