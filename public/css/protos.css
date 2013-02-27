@@ -262,31 +262,37 @@ body {
 	box-shadow: 0 2px 0 #161926;
 }
 
+/* TEXT ORGAN */
 #organ_resume p {
 	font-size:1.4em;
 	padding:10px;
 }
 
-#organ_details ul {
+/* FORM ORGAN */
+#organ_perso ul {
 	width:100%;
 	font-size:1.6em;
 	padding:20px 0 10px 0;
 
 	border-top:1px solid #292c33;
 }
-#organ_details ul li {
+#organ_perso ul li {
 	width:100%;
 	padding:10px 0 10px 0;
 }
-#organ_details ul li p:nth-child(1){
-	padding:5px 0 8px 0;
-}
-#organ_details ul li input{
-	width:200px;
+
+#organ_perso ul li p:nth-child(1){
+	float:left;
+	padding-right:10px;
 }
 
-#organ_details ul li span{
-	padding: 0 5px 0 5px;
+#organ_perso ul li input{
+	width:200px;
+	margin-top:10px;
+}
+
+#organ_perso ul li span{
+	padding:0 5px;
 }
 .atr_price{
 	font-size:1.4em;

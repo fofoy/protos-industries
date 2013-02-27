@@ -35,5 +35,5 @@ $(function(){
         $('#organ_perso').hide();
         $('#organ_resume').show();
     });
-    $('#organ_perso').hide();
+    $('#organ_resume').hide();
 });
