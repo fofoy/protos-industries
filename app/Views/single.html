@@ -16,7 +16,7 @@
 				<form action="">
 				<ul>
 					<li>
-						<p>Price : </p><p class="atr_price"><?php echo $organ->price;?>$</p>
+						<p>Price : </p><p class="atr_price "><span class="initial_price"><?php echo $organ->price;?></span>$</p>
 					</li>
 					<?php foreach($characteristics as $item): ?>
 						<?php switch($item->type){
@@ -24,7 +24,7 @@
 								<li>
 									<p><?php echo $item->name ?> :</p><span class="characteristic_value"><?php echo $item->minvalue ?></span><span><?php echo $item->unit ?></span></p>
 									<span>-</span><input type="range" class="range" name="myRange"  title="<?php echo $item->name ?>" value="0"  min="<?php echo $item->minvalue ?>" max="<?php echo $item->maxvalue ?>" step="<?php echo $item->step ?>"><span>+</span>
-									<p class="atr_price">+ 0$</p>
+									<p class="atr_price">+ <span class="charac_price">0</span>$</p>
 								</li>
 							<?php break;
 							case "checkbox":
@@ -33,7 +33,7 @@
 						} ?>
 					<?php endforeach; ?>
 					<li>
-						<p id="total_perso">Total:</p><p class="atr_price"><?php echo $organ->price;?>$</p>
+						<p id="total_perso">Total:</p><p class="atr_price total"><?php echo $organ->price;?>$</p>
 					</li>
 				</ul>
 				<input type="submit" value="Buy object">

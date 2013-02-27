@@ -37,9 +37,16 @@ $(function(){
     });
     $('#organ_resume').hide();
 
-    // Personalization
+    // Personalization & Effect On Price
     $('.range').change(function(){
+        var total = 0;
         $(this).prevAll('.characteristic_value').text($(this).context.value);
-        $(this).nextAll('.atr_price').text('+ '+$(this).context.value*6+'$');
+        $(this).nextAll('.atr_price').find('.charac_price').text($(this).context.value*6);
+        // Calculate the organ price
+        $('.charac_price').each(function(){
+            total += parseInt($(this).text());
+        });
+        // Retrieve the organ price
+        $('.total').text(parseInt($('.initial_price').html())+total+'$');
     });
 });
