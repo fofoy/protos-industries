@@ -13,7 +13,11 @@
 				<p><?php echo $organ->description ?></p>
 			</div>
 			<div id="organ_perso">
+				<form action="">
 				<ul>
+					<li>
+						<p>Price : </p><p class="atr_price"><?php echo $organ->price;?>$</p>
+					</li>
 					<?php foreach($characteristics as $item): ?>
 						<?php switch($item->type){
 							case "range": ?>
@@ -28,34 +32,12 @@
 							break;
 						} ?>
 					<?php endforeach; ?>
-					<!--<li>
-						<p>Usable surface :</p><p>79 Years</p>
-						<span>-</span><input type="range"  id="range" name="myRange"  title="Curseur" value="0"  min="0" max="500" step="5" onChange="document.getElementById('poupou').textContent=value"><span>+</span>
-						<p class="atr_price" id="poupou">+50$</p>
-					</li>
 					<li>
-						<p>Usable surface :</p><p>79 Years</p>
-						<span>-</span><input type="range"><span>+</span>
-						
-						<p class="atr_price">+50$</p>
+						<p id="total_perso">Total:</p><p class="atr_price"><?php echo $organ->price;?>$</p>
 					</li>
-					<li>
-						<p>Usable surface :</p><p>79 Years</p>
-						<span>-</span><input type="range"><span>+</span>
-						<p class="atr_price">+500$</p>
-					</li>
-					<li>
-						<p>Usable surface :</p><p>79 Years</p>
-						<span>-</span><input type="range"><span>+</span>
-						<p class="atr_price">+50$</p>
-					</li>
-					<li>
-						<p>Feelings<a></a></p>
-						<input type="checkbox">
-						<p class="atr_price">+500$</p>
-					</li>-->
 				</ul>
-				
+				<input type="submit" value="Buy object">
+				</form>
 			</div>
 		</div>
 <?php include("footer.html"); ?>

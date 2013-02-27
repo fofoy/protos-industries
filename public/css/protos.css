@@ -270,13 +270,24 @@ body {
 #organ_perso ul {
 	width:100%;
 	font-size:1.6em;
-	padding:20px 0 10px 0;
+	padding:10px 0 10px 0;
 
 	border-top:1px solid #292c33;
+}
+
+#organ_perso ul li:first-child{
+	margin-bottom:10px;
+	color:#aabad2;
 }
 #organ_perso ul li {
 	width:100%;
 	padding:10px 0 10px 0;
+}
+#organ_perso ul li:last-child {
+	font-size:1.6em;
+	border-top: 1px solid #292c33;
+	border-bottom: 1px solid #292c33;
+	height:30px;
 }
 
 #organ_perso ul li p:nth-child(1){
@@ -293,8 +304,22 @@ body {
 	padding:0 5px;
 }
 .atr_price{
-	font-size:1.4em;
+	font-size:1.2em;
 	float:right;
+}
+
+#organ_perso input[type="submit"] {
+	display: inline-block;
+	width: 100%;
+	padding: .5em .5em;
+	margin: 0 auto;
+	cursor: pointer;
+	color: #e6f4fc;
+	background: #2a384e;
+	border: 1px solid #2a384e;
+	text-shadow: 1px 1px 0 #121821;
+	box-shadow: 0 2px 0 #161926;
+	font-size: 1.4em;
 }
 
 /* SIGN IN / SIGN UP */
