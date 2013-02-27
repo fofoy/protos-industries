@@ -377,6 +377,7 @@ body {
 	font-size: 1.4em;
 }
 
+
 /* SIGN IN / SIGN UP */
 #signin {
 	background-color: rgba(21,23,28,0.9);
@@ -387,11 +388,9 @@ body {
 	color:#fff;
 }
 
-#signin h2 ,#account h2 {
+#signin h2 ,#account h2, #basket h2 {
 	font-size:2.2em;
-
 	padding:10px 0 10px 0;
-
 	border-bottom:1px solid black;
 }
 
@@ -479,6 +478,63 @@ body {
 }
 #account_details{float:left;}
 #account_history{float:right;}
+
+/* BASKET */
+#basket {
+	width:800px;
+	margin:0 auto;
+	background-color: rgba(21,23,28,0.9);
+	padding:15px;
+	color:#fff;
+}
+
+#basket img{
+	height:100px;
+	width:100px;
+	float:left;
+}
+#basket > p:first-child{
+	width:20px;
+	font-size: 2.3em;
+	padding:3px;
+	border:3px solid #fff;
+	border-top:none;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+	color:#9ddcf4;
+	float:left;
+	margin-right: 20px;
+}
+
+#basket ul li {
+	height:100px;
+	font-size:1.4em;
+	padding-top:15px;
+	border-top:1px solid #292c33;
+	border-bottom:1px solid #121419;
+}
+
+#basket ul li p:nth-child(2) {
+	display:block;
+	font-size: 1.8em;
+	padding-bottom:5px;
+}
+#basket ul li p:nth-child(3) {
+	width:500px;
+	float:left;
+}
+
+#basket ul li div{
+	float:right;
+	padding:0 20px;
+	font-size:1.6em;
+	color:#aabad2;
+}
+
+#basket ul li div a{
+	color:#aabad2;
+	font-size: 1rem;
+}
 
 /* FOOTER */
 footer {

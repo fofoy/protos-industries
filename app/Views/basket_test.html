@@ -1,27 +1,25 @@
 <?php include("header.html"); ?> 
-<div id="account">
-	<div id="account_details">
-		<h2>Account Informations</h2>
-		<form action="" method="post" autocomplete="off">
-			<fieldset>
-				<h3>Personal informations:</h3>
-				<p>H.iD: <span>2135239F12JGA34T9GK</span></p>
-				<p>Last name: <span>Johnson</span></p>
-				<p>First name: <span>Chell</span></p>
-				<p>Age: <span>30</span></p>
-				<p>Address: <span>120 N. Washington Sq. Suite 110 A</span></p>
-				<p>City: <span>Lansing, MI 50459</span></p>
-				<h3>Account settings:</h3>
-			</fieldset>
-			<fieldset>
-				<label for="hid">My H.iD is:</label><input type="text" name="hid" id="hid" placeholder="Enter your H.iD" required>
-				<label for="email">E-mail address:</label><input type="email" name="email" id="email" placeholder="E-mail address" value="<?php echo $email ?>" required>
-				<label for="email_repeat">Type it again:</label><input type="email" name="email_repeat" id="email_repeat" placeholder="Repeat E-mail address" value="<?php echo $email ?>" required>
-			</fieldset>
-		</form>
-	</div>
-	<div id="account_history">
-		<h2>Previous history</h2>
-	</div>
+<div id="basket">
+		<p>0</p><h2>Item in box</h2>
+		<ul>
+			<li>
+				<img src="public/images/eye.png" alt="">
+				<p>Product name - 12123</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quisquam inventore ducimus a cumque assumenda soluta iure ipsam vitae obcaecati nostrum nisi iusto culpa facilis ipsa reiciendis. Aspernatur tempore!</p>
+				<div>
+					<p>2323$</p>
+					<a href="#">more details</a>
+				</div>
+			</li>
+			<li>
+				<img src="public/images/eye.png" alt="">
+				<p>Product name - 12123</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quisquam inventore ducimus a cumque assumenda soluta iure ipsam vitae obcaecati nostrum nisi iusto culpa facilis ipsa reiciendis. Aspernatur tempore!</p>
+				<div>
+					<p>2323$</p>
+					<a href="#">more details</a>
+				</div>
+			</li>
+		</ul>
 </div>
 <?php include("footer.html"); ?> 
