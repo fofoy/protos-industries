@@ -59,6 +59,10 @@ class App_controller{
         echo Views::instance()->render('userref.html');
     }
 
+    function account(){
+        echo Views::instance()->render('account.html');
+    }
+
     function organ(){
         $id=F3::get('PARAMS.id');
         $organ=App::instance()->getOrgan($id);
