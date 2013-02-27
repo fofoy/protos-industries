@@ -9,6 +9,18 @@ class App_controller{
         echo Views::instance()->render('protos.html');
     }
 
+    function sendMail(){
+        F3::set('from','<fofoy@free.fr>');
+        F3::set('to',F3::get('SESSION.email'));
+        F3::set('subject','It\'s working');
+        ini_set('sendmail_from',F3::get('from'));
+        mail(
+            F3::get('to'),
+            F3::get('subject'),
+            Views::instance()->render('email.html','text/html')
+        );
+    }
+
     function signup(){
         switch(F3::get('VERB')){
             case 'GET':
@@ -47,7 +59,7 @@ class App_controller{
                     if($user=App::instance()->login(F3::get('POST.email'),F3::get('POST.password'))){
                         F3::set('SESSION.id',$user->id);
                         F3::set('SESSION.email',$user->email);
-                        echo Views::instance()->render('single.html');
+                        echo Views::instance()->render('account.html');
                         return;
                     }
                 }
