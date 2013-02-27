@@ -245,6 +245,18 @@ body {
 	border-top: 28px solid #000;
 }
 
+#slogan {
+	float:right;
+	font-size:3em;
+	color:#fff;
+	opacity:0.8;
+	width:450px;
+	text-align:right;
+	font-style: italic;
+	padding:10px;
+	line-height: 1.3em;
+}
+
 /*FIN HOME */
 /* SINGLE ORGAN */
 
