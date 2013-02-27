@@ -42,7 +42,7 @@
 			</nav>
 			<div class="user_actions">
 				<a href="signin">
-					Hello, please login<br>
+					Hello, please login<?php echo F3::get('SESSION.email') ?><br>
 					<span>Your account</span>
 				</a>
 				<a href="#">
