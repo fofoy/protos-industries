@@ -29,6 +29,11 @@ class App extends Prefab{
         return $organ->load(array('id=?',$id));
     }
 
+    function getCharacteristics($idOrgan){
+        $characteristics=new DB\SQL\Mapper(F3::get('dB'),'characteristics');
+        return $characteristics->find(array('organ_id=?',$idOrgan));
+    }
+
     function __destruct(){
     	
     }

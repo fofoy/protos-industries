@@ -70,9 +70,12 @@ class App_controller{
             F3::error('404');
             return;
         }
+        $characteristics=App::instance()->getCharacteristics($id);
+
         $ajax['model']=$organ->model;
         echo json_encode($ajax);
         F3::set('organ',$organ);
+        F3::set('characteristics',$characteristics);
         echo Views::instance()->render('single.html');
     }
 

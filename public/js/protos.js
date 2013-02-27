@@ -36,4 +36,10 @@ $(function(){
         $('#organ_resume').show();
     });
     $('#organ_resume').hide();
+
+    // Personalization
+    $('.range').change(function(){
+        $(this).prevAll('.characteristic_value').text($(this).context.value);
+        $(this).nextAll('.atr_price').text('+ '+$(this).context.value*6+'$');
+    });
 });
