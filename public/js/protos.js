@@ -25,7 +25,7 @@ $(function(){
         $('#password_disabled').attr('disabled',true);
     });
     
-    // Toggle on the disabled password input
+    // Affichage panneau organ
     $('#a_perso').click(function(){
         $('#organ_resume').hide();
         $('#organ_perso').show();
@@ -49,4 +49,18 @@ $(function(){
         // Retrieve the organ price
         $('.total').text(parseInt($('.initial_price').html())+total+'$');
     });
+
+    $('#scrolling_text').scroll(function(){
+        $("#scrolldown").animate({
+            opacity: 0
+          }, 1000 );
+    });
+
+    $('#scrolldown').click(function(){
+        $("#scrolling_text").animate({
+            scrollTop: 200
+          }, 1000 );
+    });
+
+
 });
