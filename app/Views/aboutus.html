@@ -1,5 +1,17 @@
 <?php include("header.html"); ?>
-<div id="image_background"></div>
+<script type="text/javascript" src="public/js/lib/jquery.vegas.js"></script>
+<link rel="stylesheet" type="text/css" href="public/css/jquery.vegas.css" />
+<script>
+	$( function() {
+		  $.vegas({
+		    src:'public/css/img/protos_background.jpg',
+		    fade:3000
+		  });
+		  $.vegas('overlay', {
+		    src:'public/css/overlays/02.png'
+		  });
+	});
+</script>
 <div id="scrolling_text">
 		<h1>Building your future since 2213</h1>
 		<span id="scrolldown">Scroll down <i class="icon-double-angle-down"></i></span>
