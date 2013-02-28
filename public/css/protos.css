@@ -113,19 +113,35 @@ body {
 
 /* HOME */
 #scrolling_text{
-	width:400px;
+	width:450px;
 	height:300px;
 	float:right;
 	color:white;
 	overflow:hidden;
+	padding:25px;
+
+	margin:50px 50px 0 0;
 }
 
 #scrolling_text h1 {
-	font-size:4em;
-	line-height: 1.4em;
+	font-size:4.2em;
+	line-height: 1.3em;
 	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
+#scrolling_text h1:before {
+	content:"\" ";
+	margin-left:-25px;
+}
+
+#scrolling_text h1:after {content:" \"";}
+
+#scrolling_text > p {
+	padding:10px 0 5px 0;
+	font-size:1.4em;
+	line-height: 1.4em;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
 /* INBOX NAV*/
 .user_actions {
