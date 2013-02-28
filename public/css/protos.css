@@ -94,7 +94,7 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 	height:100%;
 	overflow:hidden;
 
-	background: url(img/protos_background.png) no-repeat center center fixed; 
+	background: url(img/protos_background.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -111,7 +111,23 @@ body {
 	font-family: 'Electrolize', sans-serif;
 }
 
+/* HOME */
+#scrolling_text{
+	width:400px;
+	height:300px;
+	float:right;
+	color:white;
+	overflow:hidden;
+}
 
+#scrolling_text h1 {
+	font-size:4em;
+	line-height: 1.4em;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+
+/* INBOX NAV*/
 .user_actions {
 	float:right;
 	margin:80px 0 0 0;
@@ -138,7 +154,7 @@ body {
 	color:#9ddcf4;
 }
 
-/* NAV ORGANES */
+/* NAV PRODUCTS */
 
 .nav_organes {
 	position:absolute;
@@ -276,7 +292,7 @@ body {
 	line-height: 1.3em;
 }
 
-/*FIN HOME */
+/*FIN PRODUCTS*/
 /* SINGLE ORGAN */
 
 #wrapper{
