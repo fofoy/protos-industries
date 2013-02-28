@@ -71,6 +71,14 @@ class App_controller{
         echo Views::instance()->render('userref.html');
     }
 
+    function concept(){
+        echo Views::instance()->render('concept.html');
+    }
+
+    function contact(){
+        echo Views::instance()->render('contact.html');
+    }
+
     function account(){
         echo Views::instance()->render('account.html');
     }
