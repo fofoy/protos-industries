@@ -83,6 +83,25 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a384c', endColorstr='#1b212b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+/* IMG BACKGROUND */
+#image_background{
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:-10;
+	height:100%;
+	overflow:hidden;
+
+	background: url(img/protos_background.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment: scroll;
+}
+
 body {
 	height: 100%;
 	margin:0;

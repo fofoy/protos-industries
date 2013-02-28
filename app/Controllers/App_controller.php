@@ -75,8 +75,8 @@ class App_controller{
         echo Views::instance()->render('concept.html');
     }
 
-    function contact(){
-        echo Views::instance()->render('contact.html');
+    function aboutus(){
+        echo Views::instance()->render('aboutus.html');
     }
 
     function account(){
