@@ -6,7 +6,7 @@ class App_controller{
     }
  
     function home(){
-        echo Views::instance()->render('protos.html');
+        echo Views::instance()->render('aboutus.html');
     }
 
     function sendMail(){
@@ -75,8 +75,8 @@ class App_controller{
         echo Views::instance()->render('concept.html');
     }
 
-    function aboutus(){
-        echo Views::instance()->render('aboutus.html');
+    function products(){
+        echo Views::instance()->render('products.html');
     }
 
     function account(){
