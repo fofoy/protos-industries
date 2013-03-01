@@ -40,10 +40,17 @@
 				</ul>
 			</nav>
 			<div class="user_actions">
-				<a href="signin">
-					Hello, <?php if(F3::get('SESSION.email')){ echo F3::get('SESSION.email'); }else{ echo 'please login'; } ?><br>
+				<?php if(F3::get('SESSION.email')) :  ?>
+				<a href="account">
+					Hello, <?php echo F3::get('SESSION.email') ?><br>
 					<span>Your account</span>
 				</a>
+				<?php else : ?>
+				<a href="signin">
+					Hello, please login<br>
+					<span>Your account</span>
+				</a>
+				<?php endif; ?>
 				<a href="#">
 					<p>0</p>
 					<p>In box</p>

@@ -7,15 +7,13 @@ class App extends Prefab{
 
     function signup(){
     	$user=new DB\SQL\Mapper(F3::get('dB'),'user');
+        if($user->load(array('email=?',$_POST['email']))){
+            $errorMsg = 'Votre e-mail est déjà associé à un compte';
+            return $errorMsg;
+        }
     	$user->email=$_POST['email'];
     	$user->hid=$_POST['hid'];
     	$user->password=md5($_POST['password']);
-    	$usertest=new DB\SQL\Mapper(F3::get('dB'),'user');
-    	$usertest->load(array('email=?',$user->email));
-    	if($usertest->email){
-    		$errorMsg = 'Votre e-mail est déjà associé à un compte';
-    		return $errorMsg;
-    	}
     	$user->save();
     }
 

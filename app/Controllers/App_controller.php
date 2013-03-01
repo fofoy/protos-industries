@@ -1,9 +1,17 @@
 <?php
 class App_controller{
+
     public $basket;
+
     function __construct(){
         $this->basket=new \Basket;
     }
+
+    /*function beforeroute(){
+        if(!is_callable(array($this, F3::get('PARAMS.action')))){
+            F3::reroute('404');
+        }
+    }*/
  
     function home(){
         echo Views::instance()->render('aboutus.html');
