@@ -3,10 +3,16 @@
 <div id="container"></div>
 	<script type="text/javascript" src="public/js/lib/ColladaLoader.js"></script>
 	<script type="text/javascript" src="public/js/lib/TrackballControls.js"></script>
+	<script type="text/javascript" src="public/js/lib/jquery.tipsy.js"></script>
 	<script type="text/javascript" src="public/js/organ.js"></script>
+	<script>
+		$(function(){
+		    $('.icon-info-sign').tipsy({gravity:'sw', html:true});
+		});
+	</script>
 		<div id="organ_3d">
 		</div>
-		<div id="rotate_control"></div>
+		<div id="rotate_control"><i class="icon-pause"></i></div>
 		<div id="organ_details">
 			<h2><?php echo $organ->name ?></h2>
 			<p id="a_perso" href="#">Personalization</p>
@@ -24,7 +30,9 @@
 						<?php switch($item->type){
 							case "range": ?>
 								<li>
-									<p><?php echo $item->name ?> :</p><span class="characteristic_value"><?php echo $item->minvalue ?></span><span><?php echo $item->unit ?></span></p>
+									<p><?php echo $item->name ?> :</p>
+									<i class="icon-info-sign" original-title="This allows your brain to be much more resistant to mental disaster like Alzheimer’s desease."></i>
+									<span class="characteristic_value"><?php echo $item->minvalue ?></span><span><?php echo $item->unit ?></span></p>
 									<span>-</span><input type="range" class="range" name="myRange"  title="<?php echo $item->name ?>" value="0"  min="<?php echo $item->minvalue ?>" max="<?php echo $item->maxvalue ?>" step="<?php echo $item->step ?>"><span>+</span>
 									<p class="atr_price">+ <span class="charac_price">0</span>$</p>
 								</li>

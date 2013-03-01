@@ -332,7 +332,8 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 }
 #rotate_control{
 	display:block;
-	background-color:white;
+	color:white;
+	font-size:2em;
 	height:25px;
 	width:25px;
 	float:left;
@@ -405,7 +406,14 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 	float:left;
 	padding-right:10px;
 }
+#organ_perso ul li i {
+	color:#9edff7;
+	cursor:pointer;
+}
 
+.tooltip {
+	background:grey;
+}
 #organ_perso ul li input{
 	width:200px;
 	margin-top:10px;
