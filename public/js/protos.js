@@ -28,12 +28,12 @@ $(function(){
     // Affichage panneau organ
     $('#a_perso').click(function(){
         $('#organ_resume').hide();
-        $('#organ_perso').show();
+        $('#organ_perso').slideDown();
     });
 
     $('#a_resume').click(function(){
         $('#organ_perso').hide();
-        $('#organ_resume').show();
+        $('#organ_resume').slideDown();
     });
     $('#organ_resume').hide();
 
@@ -50,6 +50,7 @@ $(function(){
         $('.total').text(parseInt($('.initial_price').html())+total+'$');
     });
 
+    //HOME
     $('#scrolling_text').scroll(function(){
         $("#scrolldown").animate({
             opacity: 0
