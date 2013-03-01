@@ -9,6 +9,11 @@ class App_controller{
         echo Views::instance()->render('aboutus.html');
     }
 
+    function logout(){
+        session_destroy();
+        F3::reroute('/');
+    }
+
     function addToBasket($id){
         
         $this->basket->set('item','chicken wings');
