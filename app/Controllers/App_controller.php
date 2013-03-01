@@ -121,6 +121,10 @@ class App_controller{
         echo Views::instance()->render('purchased.html');
     }
 
+    function conditions(){
+        echo Views::instance()->render('conditions.html');
+    }
+
     function organ(){
         $id=F3::get('PARAMS.id');
         $organ=App::instance()->getOrgan($id);

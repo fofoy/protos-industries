@@ -11,15 +11,15 @@ $(function(){
     });
 
     // Bind the mute button
-    $('footer a').bind('click', function(){
+    $('footer > a').bind('click', function(){
         $(this).hasClass('muted') ? SC_player.setVolume(100) : SC_player.setVolume(0);
         $(this).toggleClass('muted');
-        if ($('footer a i').hasClass('icon-volume-up')){
-            $('footer a i').removeClass('icon-volume-up');
-            $('footer a i').addClass('icon-volume-off');
+        if ($('footer > a i').hasClass('icon-volume-up')){
+            $('footer > a i').removeClass('icon-volume-up');
+            $('footer > a i').addClass('icon-volume-off');
         } else {
-            $('footer a i').removeClass('icon-volume-off');
-            $('footer a i').addClass('icon-volume-up');
+            $('footer > a i').removeClass('icon-volume-off');
+            $('footer > a i').addClass('icon-volume-up');
         }
         return false;
     });

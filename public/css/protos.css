@@ -642,8 +642,15 @@ footer {
 	background: #242830;
 	opacity:0.6;
 }
-
-footer a {
+footer > p {
+	padding:15px;
+}
+footer > p > a {
+	color:white;
+	padding:15px;
+	font-size:1.4em;
+}
+footer > a {
 	display: inline-block;
 	width: 22px;
 	height: 22px;
