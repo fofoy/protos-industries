@@ -1,12 +1,29 @@
 <?php
 class App_controller{
- 
+    public $basket;
     function __construct(){
-        
+        $this->basket=new \Basket;
     }
  
     function home(){
         echo Views::instance()->render('aboutus.html');
+    }
+
+    function addToBasket($id){
+        
+        $this->basket->set('item','chicken wings');
+        $basket->set('quantity',1);
+        $basket->save();
+    }
+
+    function show(){
+        $basket=new \Basket;
+        $basket->set('item','chicken wings');
+        $basket->set('quantity',1);
+        $basket->save();
+        $count=$basket->count();
+        F3::set('basket',$count);
+        echo Views::instance()->render('single.html');
     }
 
     function sendMail(){
@@ -99,9 +116,11 @@ class App_controller{
             return;
         }
         $characteristics=App::instance()->getCharacteristics($id);
-
-        $ajax['model']=$organ->model;
-        echo json_encode($ajax);
+        if(F3::get('AJAX')){
+            $ajax['organ']['model']=$organ->model;
+            echo json_encode($ajax);
+            return;
+        }
         F3::set('organ',$organ);
         F3::set('characteristics',$characteristics);
         echo Views::instance()->render('single.html');

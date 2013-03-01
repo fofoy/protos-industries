@@ -1,5 +1,7 @@
 $(function(){
 
+$.getJSON(location.href, function(response){
+
 var rotate = true;
 
 	/* 1. SCENE */
@@ -30,7 +32,7 @@ controls.keys = [ 65, 83, 68 ];
 var organ;
 var loader = new THREE.ColladaLoader();
 loader.options.convertUpAxis = true;
-loader.load( 'public/models/robot_hand.dae', function (model) {
+loader.load( response.organ.model, function (model) {
 	organ = model.scene;
 	//organ.scale.set(0.2,0.2,0.2);
 	organ.position.set(0,0,0);
@@ -83,5 +85,7 @@ function render() {
 }
 
 animate();
+
+});
 
 });
