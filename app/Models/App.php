@@ -13,7 +13,7 @@ class App extends Prefab{
     	$usertest=new DB\SQL\Mapper(F3::get('dB'),'user');
     	$usertest->load(array('email=?',$user->email));
     	if($usertest->email){
-    		$errorMsg = 'Votre e-mail est déjà associée à un compte';
+    		$errorMsg = 'Votre e-mail est déjà associé à un compte';
     		return $errorMsg;
     	}
     	$user->save();
