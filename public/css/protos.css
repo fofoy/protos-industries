@@ -146,7 +146,7 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 /* HOME */
 #scrolling_text{
 	width:450px;
-	height:250px;
+	height:300px;
 	float:right;
 	color:white;
 	overflow:auto;
@@ -631,6 +631,34 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 	text-align:center;
 	margin:0 auto;
 	padding:10px 0 10px 0;
+}
+
+/* CONDITIONS SALES */
+#conditions {
+	width:800px;
+	overflow:auto;
+	margin:30px auto;
+	padding:20px;
+	color:white;
+}
+
+#conditions h1 {
+	font-size:3em;
+}
+#conditions h2 {
+	padding:15px 0 5px 0;
+	font-size:2.6em;
+}
+#conditions h3 {
+	padding:15px 0 5px 0;
+	font-size:2em;
+}
+#conditions p {
+	padding:5px 0 5px 0;
+	font-size:1.4em;
+}
+#conditions p span{
+	font-style:italic;
 }
 
 /* FOOTER */
