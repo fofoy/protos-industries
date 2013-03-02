@@ -26,7 +26,7 @@ $(function(){
 
     // Toggle on the disabled password input
     $('#yes').bind('click',function(){
-        $(this).next().attr('disabled',false);
+        $('#password_disabled').attr('disabled',false);
     });
     $('#no').bind('click',function(){
         $('#password_disabled').attr('disabled',true);
