@@ -3,47 +3,19 @@
 <div id="container"></div> 
 		<div class="nav_organes">
 			<ul>
-				<li>
-					<div class="down-line"></div>
-					<div class="down-details_object">Lorem PSUMSUM</div>
-					<a href="1-organ"><div class="hexagon"><span></span>Hands</div></a>
-				</li>
-				<li>
-					<div class="down-line"></div>
-					<div class="down-details_object">Lorem PSUMSUM</div>
-					<a href="1-organ"><div class="hexagon"><span></span>Legs</div></a>
-				</li>
-				<li>
-					<div class="up-line"></div>
-					<div class="up-details_object">Lorem PSUMSUM</div>
-					<a href="1-organ"><div class="hexagon"><span></span>Arms</div></a>
-				</li>
-				<li>
-					<div class="down-line"></div>
-					<div class="down-details_object">Lorem PSUMSUM</div>
-					<a href="1-organ"><div class="hexagon"><span></span>Heart</div></a>
-				</li>
+				<?php foreach($organs as $item): ?>
 				<li>
 					<div class="up-line"></div>
 					<div class="up-details_object">
-						<p>X-Ray</p>
-						<p>Vision</p>
-						<p>Zoom</p>
-						<p>Colors</p>
-						<p>Pictures</p>
+						<?php foreach($characteristics as $characteristic): ?>
+							<?php if($characteristic->organ_id == $item->id): ?>
+								<p><?php echo $characteristic->name ?></p>
+							<?php endif; ?>
+						<?php endforeach; ?>
 					</div>
-					<a href="1-organ"><div class="hexagon"><span></span>Eyes</div></a>
+					<a href="<?php echo $item->id.'-'.$item->name ?>"><div class="hexagon"><span></span><?php echo $item->name ?></div></a>
 				</li>
-				<li>
-					<div class="up-line"></div>
-					<div class="up-details_object">Lorem PSUMSUM</div>
-					<a href="1-organ"><div class="hexagon"><span></span>Lungs</div></a>
-				</li>
-				<li>
-					<div class="down-line"></div>
-					<div class="down-details_object">Lorem PSUMSUM</div>
-					<a href="1-organ"><div class="hexagon"><span></span>Brain</div></a>
-				</li>
+				<?php endforeach; ?>
 			</ul>
 		</div>
 		<div id="slogan"><h1>" The world is evolving, and we wont be left behind. "</h1></div>

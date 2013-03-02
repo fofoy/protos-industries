@@ -106,6 +106,10 @@ class App_controller{
     }
 
     function products(){
+        $organs=App::instance()->getAllOrgans();
+        $characteristics=App::instance()->getAllCharacteristics();
+        F3::set('organs',$organs);
+        F3::set('characteristics',$characteristics);
         echo Views::instance()->render('products.html');
     }
 

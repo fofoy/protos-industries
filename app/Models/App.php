@@ -27,9 +27,19 @@ class App extends Prefab{
         return $organ->load(array('id=?',$id));
     }
 
+    function getAllOrgans(){
+        $organs=new DB\SQL\Mapper(F3::get('dB'),'organ');
+        return $organs->find();
+    }
+
     function getCharacteristics($idOrgan){
         $characteristics=new DB\SQL\Mapper(F3::get('dB'),'characteristics');
         return $characteristics->find(array('organ_id=?',$idOrgan));
+    }
+
+    function getAllCharacteristics(){
+        $characteristics=new DB\SQL\Mapper(F3::get('dB'),'characteristics');
+        return $characteristics->find();
     }
 
     function __destruct(){
