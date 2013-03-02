@@ -616,7 +616,11 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 	box-shadow: 0 2px 0 #161926;
 	font-size: 1.4em;
 }
-
+/* CONCEPT */
+#concept {
+	height:2000px;
+	display:table;
+}
 /* PURCHASED BPX*/
 
 #purchased img {

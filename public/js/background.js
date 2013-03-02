@@ -77,16 +77,4 @@ function changeBackground(event){
 	renderer.render( scene, camera );
 }
 
-function onMouseMove(event){
-	mouseX = (event.clientX - window.innerWidth/2) / window.innerWidth/2;
-	mouseY = (event.clientY - window.innerHeight/2) / window.innerHeight/2;
-	camera.position.x = Math.sin(mouseX * Math.PI) * distance;
-	camera.position.y = - Math.sin(mouseY * Math.PI) * distance;
-	camera.lookAt(new THREE.Vector3(0,0,0));
-	renderer.render( scene, camera );
-}
-
-
-
-	
 });
