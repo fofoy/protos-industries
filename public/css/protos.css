@@ -204,7 +204,7 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 
 .nav_organes ul li:hover{opacity:1;}
 .up-details_object, .down-details_object{
-	width:100px;
+	width:200px;
 	color:white;
 	
 	display:none;
