@@ -16,7 +16,7 @@ var scene = new THREE.Scene();
 /* 2. CAMERA */
 
 var camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, 0.1, 1000);
-camera.position.set(0,0,-8);
+camera.position.set(0,0,-12);
 controls = new THREE.TrackballControls( camera );
 
 controls.rotateSpeed = 3.0;

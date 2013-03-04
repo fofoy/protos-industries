@@ -1,4 +1,32 @@
 <?php include("partials/header.html"); ?>
-<div id="container"></div>
-<div id="concept">a</div>
+<script type="text/javascript" src="public/js/lib/jquery.vegas.js"></script>
+<link rel="stylesheet" type="text/css" href="public/css/jquery.vegas.css" />
+<script>
+	$( function() {
+		  $.vegas({
+		    src:'public/css/img/retro_futurism.jpg',
+		    fade:3000
+		  });
+		  $.vegas('overlay', {
+		    src:'public/css/overlays/12.png'
+		  });
+
+	   	var $window = $(window),
+	       	$stickyEl = $('#concept .second'),
+	       	elTop = $stickyEl.offset().top;
+
+		$window.scroll(function() {
+		    $stickyEl.toggleClass('sticky_top', $window.scrollTop() > elTop);
+		});
+	});
+</script>
+<div id="concept">
+	<h1>" We want to evolve, and we want to do it together, with you. "</h1>
+	<div class="first">
+		<p>We at Protos have some of the best minds of our era to help you. The finest doctors as well as biologist are here to make your life easier.</p>
+		<p>Our first goal is to create bionic organs so people missing them no longer have to see their handicap as a fatality. 
+		We have witnessed the evolution of the world for years now, but the human race is being dragged behind. We want, quite simply, to put everybody on the same footing.</p>
+		<i class="icon-double-angle-down go_down"></i>
+	</div>
+</div>
 <?php include("partials/footer.html"); ?> 
