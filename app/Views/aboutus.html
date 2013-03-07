@@ -1,4 +1,5 @@
 <?php include("partials/header.html"); ?>
+ <style type="text/css">body {overflow:hidden;}</style>
 <script type="text/javascript" src="public/js/lib/jquery.vegas.js"></script>
 <link rel="stylesheet" type="text/css" href="public/css/jquery.vegas.css" />
 <script>
@@ -12,6 +13,45 @@
 		  });
 	});
 </script>
+<script>
+window.onload = function()
+{
+    //adding the event listerner for Mozilla
+    if(window.addEventListener)
+        document.addEventListener('DOMMouseScroll', moveObject, false);
+ 
+    //for IE/OPERA etc
+    document.onmousewheel = moveObject;
+    document
+}
+function moveObject(event)
+{
+    var delta = 0;
+ 
+    if (!event) event = window.event;
+ 
+    // normalize the delta
+    if (event.wheelDelta) {
+ 
+        // IE and Opera
+        delta = event.wheelDelta / 60;
+ 
+    } else if (event.detail) {
+ 
+        // W3C
+        delta = -event.detail / 2;
+    }
+ 
+    var currPos=document.getElementById('scrolling_text').scrollTop;
+ 	console.log(delta);
+    //calculating the next position of the object
+    currPos=(currPos)-(delta*3);
+ 
+    //moving the position of the object
+    document.getElementById('scrolling_text').scrollTop = currPos;
+}
+</script>
+
 <div id="scrolling_text">
 		<h1>Building your future since 2213</h1>
 		<span id="scrolldown">Scroll down <i class="icon-double-angle-down"></i></span>
