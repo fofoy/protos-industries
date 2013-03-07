@@ -2,118 +2,26 @@
 <script type="text/javascript" src="public/js/background.js"></script>
 <div id="container"></div>
 <div id="basket">
-		<p>0</p><h2>Item in box</h2>
+		<p><?php echo $count ?></p><h2>Item<?php if($count>1) echo 's' ?> in box</h2>
 		<ul>
+			<?php if($count==0) echo '<li>Your basket is empty!</li>' ?>
+			<?php print_r($_SESSION['basket']); ?>
+			<?php foreach($_SESSION['basket'] as $item): ?>
 			<li>
 				<img src="public/images/eye.png" alt="">
-				<p>Product name - 12123</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quisquam inventore ducimus a cumque assumenda soluta iure ipsam vitae obcaecati nostrum nisi iusto culpa facilis ipsa reiciendis. Aspernatur tempore!</p>
+				<p><?php echo $item['item'] ?></p>
+				<p><?php echo $item['description'] ?></p>
 				<div>
-					<p>2323$</p>
+					<p><?php echo $item['price'].'$' ?></p>
 					<a href="#">more details</a>
 				</div>
 			</li>
-			<li>
-				<img src="public/images/eye.png" alt="">
-				<p>Product name - 12123</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quisquam inventore ducimus a cumque assumenda soluta iure ipsam vitae obcaecati nostrum nisi iusto culpa facilis ipsa reiciendis. Aspernatur tempore!</p>
-				<div>
-					<p>2323$</p>
-					<a href="#">more details</a>
-				</div>
-			</li>
-			<li>
-				<img src="public/images/eye.png" alt="">
-				<p>Product name - 12123</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quisquam inventore ducimus a cumque assumenda soluta iure ipsam vitae obcaecati nostrum nisi iusto culpa facilis ipsa reiciendis. Aspernatur tempore!</p>
-				<div>
-					<p>2323$</p>
-					<a href="#">more details</a>
-				</div>
-			</li>
-			<li>
-				<img src="public/images/eye.png" alt="">
-				<p>Product name - 12123</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quisquam inventore ducimus a cumque assumenda soluta iure ipsam vitae obcaecati nostrum nisi iusto culpa facilis ipsa reiciendis. Aspernatur tempore!</p>
-				<div>
-					<p>2323$</p>
-					<a href="#">more details</a>
-				</div>
-			</li>
-			<li>
-				<img src="public/images/eye.png" alt="">
-				<p>Product name - 12123</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quisquam inventore ducimus a cumque assumenda soluta iure ipsam vitae obcaecati nostrum nisi iusto culpa facilis ipsa reiciendis. Aspernatur tempore!</p>
-				<div>
-					<p>2323$</p>
-					<a href="#">more details</a>
-				</div>
-			</li>
-			<li>
-				<img src="public/images/eye.png" alt="">
-				<p>Product name - 12123</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quisquam inventore ducimus a cumque assumenda soluta iure ipsam vitae obcaecati nostrum nisi iusto culpa facilis ipsa reiciendis. Aspernatur tempore!</p>
-				<div>
-					<p>2323$</p>
-					<a href="#">more details</a>
-				</div>
-			</li>
-			<li>
-				<img src="public/images/eye.png" alt="">
-				<p>Product name - 12123</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quisquam inventore ducimus a cumque assumenda soluta iure ipsam vitae obcaecati nostrum nisi iusto culpa facilis ipsa reiciendis. Aspernatur tempore!</p>
-				<div>
-					<p>2323$</p>
-					<a href="#">more details</a>
-				</div>
-			</li>
-			<li>
-				<img src="public/images/eye.png" alt="">
-				<p>Product name - 12123</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quisquam inventore ducimus a cumque assumenda soluta iure ipsam vitae obcaecati nostrum nisi iusto culpa facilis ipsa reiciendis. Aspernatur tempore!</p>
-				<div>
-					<p>2323$</p>
-					<a href="#">more details</a>
-				</div>
-			</li>
-			<li>
-				<img src="public/images/eye.png" alt="">
-				<p>Product name - 12123</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quisquam inventore ducimus a cumque assumenda soluta iure ipsam vitae obcaecati nostrum nisi iusto culpa facilis ipsa reiciendis. Aspernatur tempore!</p>
-				<div>
-					<p>2323$</p>
-					<a href="#">more details</a>
-				</div>
-			</li>
-			<li>
-				<img src="public/images/eye.png" alt="">
-				<p>Product name - 12123</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quisquam inventore ducimus a cumque assumenda soluta iure ipsam vitae obcaecati nostrum nisi iusto culpa facilis ipsa reiciendis. Aspernatur tempore!</p>
-				<div>
-					<p>2323$</p>
-					<a href="#">more details</a>
-				</div>
-			</li>
-			<li>
-				<img src="public/images/eye.png" alt="">
-				<p>Product name - 12123</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quisquam inventore ducimus a cumque assumenda soluta iure ipsam vitae obcaecati nostrum nisi iusto culpa facilis ipsa reiciendis. Aspernatur tempore!</p>
-				<div>
-					<p>2323$</p>
-					<a href="#">more details</a>
-				</div>
-			</li>
-			<li>
-				<img src="public/images/eye.png" alt="">
-				<p>Product name - 12123</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quisquam inventore ducimus a cumque assumenda soluta iure ipsam vitae obcaecati nostrum nisi iusto culpa facilis ipsa reiciendis. Aspernatur tempore!</p>
-				<div>
-					<p>2323$</p>
-					<a href="#">more details</a>
-				</div>
-			</li>
-		
+			<?php endforeach; ?>	
 		</ul>
-		<input type="submit" value="Purchase">
+		<?php if($count>0): ?>
+		<form action="" method="POST">
+			<input type="submit" value="Purchase">
+		</form>
+	<?php endif; ?>
 </div>
 <?php include("partials/footer.html"); ?> 

@@ -5,6 +5,8 @@ class App_controller{
 
     function __construct(){
         $this->basket=new \Basket;
+        $count=$this->basket->count();
+        F3::set('count',$count);
     }
 
     /*function beforeroute(){
@@ -22,33 +24,32 @@ class App_controller{
         F3::reroute('/');
     }
 
-    function addToBasket($id){
-        
-        $this->basket->set('item','chicken wings');
-        $basket->set('quantity',1);
-        $basket->save();
+    function addToBasket(){
+        var_dump($_POST);
+        $id=F3::get('PARAMS.id');
+        $organ=App::instance()->getOrgan($id);
+        if(!$organ){
+            F3::error('404');
+            return;
+        }
+        $this->basket->set('item',$organ->name);
+        $this->basket->set('description',$organ->description);
+        $this->basket->set('quantity',1);
+        $this->basket->set('price',$organ->price);
+        $this->basket->save();
+        F3::reroute('/basket');
     }
 
     function show(){
-        $basket=new \Basket;
-        $basket->set('item','chicken wings');
-        $basket->set('quantity',1);
-        $basket->save();
-        $count=$basket->count();
-        F3::set('basket',$count);
-        echo Views::instance()->render('single.html');
+        echo Views::instance()->render('basket_test.html');
     }
 
     function sendMail(){
-        F3::set('from','<fofoy@free.fr>');
-        F3::set('to',F3::get('SESSION.email'));
-        F3::set('subject','It\'s working');
-        ini_set('sendmail_from',F3::get('from'));
-        mail(
-            F3::get('to'),
-            F3::get('subject'),
-            Views::instance()->render('email.html','text/html')
-        );
+        $mail=new SMTP(F3::get('smtp_host'),F3::get('smtp_port'),'SSL',F3::get('smtp_user'),F3::get('smtp_pw'));
+        $mail->set('from','<no-reply@protos.com>');
+        $mail->set('to','"Florian Quiblier" <florian.quiblier@gmail.com>');
+        $mail->set('subject','Coucou!');
+        $mail->send(Views::instance()->render('email.html'));
     }
 
     function signup(){
@@ -84,14 +85,17 @@ class App_controller{
             case 'POST':
                 if(isset($_POST['email']) && $_POST['account_choice'] == 'no'){
                     F3::set('email',$_POST['email']);
-                    echo Views::instance()->render('signup.html');
+                    F3::reroute('/signup');
                 } else {
                     if($user=App::instance()->login(F3::get('POST.email'),F3::get('POST.password'))){
                         F3::set('SESSION.id',$user->id);
+                        F3::set('SESSION.hid',$user->hid);
                         F3::set('SESSION.email',$user->email);
-                        echo Views::instance()->render('account.html');
+                        F3::reroute('/account');
                         return;
                     }
+                    F3::set('errorMsg',array('userName'=>true,'pw'=>true));
+                    echo Views::instance()->render('signin.html');
                 }
             break;
         }
@@ -114,10 +118,18 @@ class App_controller{
     }
 
     function account(){
+        $informations=App::instance()->getPersonalInformations(F3::get('SESSION.hid'));
+        F3::set('informations',$informations);
+        F3::set('SESSION.firstname',$informations->firstname);
         echo Views::instance()->render('account.html');
     }
 
     function basket_test(){
+        if(F3::get('VERB')=='POST'){
+            $this->basket->drop();
+            echo Views::instance()->render('purchased.html');
+            return;
+        }
         echo Views::instance()->render('basket_test.html');
     }
 

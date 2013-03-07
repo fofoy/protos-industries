@@ -21,7 +21,7 @@
 				<p><?php echo $organ->description ?></p>
 			</div>
 			<div id="organ_perso">
-				<form action="">
+				<form action="" method="POST">
 				<ul>
 					<li>
 						<p>Price : </p><p class="atr_price "><span class="initial_price"><?php echo $organ->price;?></span>$</p>
@@ -46,7 +46,7 @@
 						<p id="total_perso">Total:<?php echo $basket ?></p><p class="atr_price total"><?php echo $organ->price;?>$</p>
 					</li>
 				</ul>
-				<input type="submit" value="Buy object">
+				<input type="submit" value="Buy object" class="submit_organ">
 				</form>
 			</div>
 		</div>

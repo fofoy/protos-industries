@@ -7,16 +7,16 @@
 		<form action="" method="post" autocomplete="off">
 			<fieldset>
 				<h3>Personal informations:</h3>
-				<p>H.iD: <span>2135239F12JGA34T9GK</span></p>
-				<p>Last name: <span>Johnson</span></p>
-				<p>First name: <span>Chell</span></p>
-				<p>Age: <span>30</span></p>
-				<p>Address: <span>120 N. Washington Sq. Suite 110 A</span></p>
-				<p>City: <span>Lansing, MI 50459</span></p>
+				<p>H.iD: <span><?php echo $informations->hid ?></span></p>
+				<p>Last name: <span><?php echo $informations->lastname ?></span></p>
+				<p>First name: <span><?php echo $informations->firstname ?></span></p>
+				<p>Age: <span><?php echo $informations->age ?></span></p>
+				<p>Address: <span><?php echo $informations->address ?></span></p>
+				<!--<p>City: <span>Lansing, MI 50459</span></p>-->
 				<h3>Account settings:</h3>
 			</fieldset>
 			<fieldset>
-				<label for="hid">My H.iD is:</label><input type="text" name="hid" id="hid" placeholder="Enter your H.iD" required>
+				<label for="hid">My H.iD is:</label><input type="text" name="hid" id="hid" placeholder="<?php echo $informations->hid ?>" disabled>
 				<label for="email">E-mail address:</label><input type="email" name="email" id="email" placeholder="E-mail address" value="<?php echo $email ?>" required>
 				<label for="email_repeat">Type it again:</label><input type="email" name="email_repeat" id="email_repeat" placeholder="Repeat E-mail address" value="<?php echo $email ?>" required>
 			</fieldset>

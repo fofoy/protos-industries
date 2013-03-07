@@ -43,7 +43,7 @@
 			<div class="user_actions">
 				<?php if(F3::get('SESSION.email')) :  ?>
 				<a href="account">
-					Hello, <?php echo F3::get('SESSION.email') ?><br>
+					Hello, <?php echo F3::get('SESSION.firstname') ?><br>
 					<span>Your account</span>
 				</a>
 				<?php else : ?>
@@ -52,8 +52,8 @@
 					<span>Your account</span>
 				</a>
 				<?php endif; ?>
-				<a href="#">
-					<p>0</p>
+				<a href="basket">
+					<p><?php echo $count ?></p>
 					<p>In box</p>
 				</a>
 			</div>
