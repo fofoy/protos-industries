@@ -1,5 +1,4 @@
 *::selection {background:#9ddbf4;}
-
 body {
 	height: 100%;
 	margin:0;
@@ -7,6 +6,7 @@ body {
 	font-size: 62.5%;
 	background-color:#000;
 	font-family: 'Electrolize', sans-serif;
+	cursor: url(img/cursor.png), crosshair;
 }
 
 #wrapper{
@@ -618,7 +618,6 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 }
 /* CONCEPT */
 #concept{
-	height:2000px;
 	display:block;
 	color:#fff;
 }
