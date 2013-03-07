@@ -599,11 +599,11 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 }
 
 #basket ul li {
-	height:100px;
 	font-size:1.4em;
 	padding-top:15px;
 	border-top:1px solid #292c33;
 	border-bottom:1px solid #121419;
+	overflow: hidden;
 }
 
 #basket ul li p:nth-child(2) {
