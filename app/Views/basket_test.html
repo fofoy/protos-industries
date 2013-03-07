@@ -5,7 +5,6 @@
 		<p><?php echo $count ?></p><h2>Item<?php if($count>1) echo 's' ?> in box</h2>
 		<ul>
 			<?php if($count==0) echo '<li>Your basket is empty!</li>' ?>
-			<?php print_r($_SESSION['basket']); ?>
 			<?php foreach($_SESSION['basket'] as $item): ?>
 			<li>
 				<img src="public/images/eye.png" alt="">

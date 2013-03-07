@@ -70,12 +70,4 @@ $(function(){
           }, 1000 );
     });
 
-    $('.submit_organ').click(function(){
-        var price = $('.atr_price.total').html();
-        $.post(window.location.href,price,function(data) {
-            console.log('ok');
-        });
-    });
-
-
 });
