@@ -103,10 +103,6 @@ class App_controller{
             break;
         }
     }
- 
-    function doc(){
-        echo Views::instance()->render('userref.html');
-    }
 
     function concept(){
         echo Views::instance()->render('concept.html');
