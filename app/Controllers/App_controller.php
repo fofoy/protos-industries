@@ -1,7 +1,7 @@
 <?php
 class App_controller{
 
-    public $basket;
+    private $basket;
 
     function __construct(){
         $this->basket=new \Basket;
@@ -25,7 +25,6 @@ class App_controller{
     }
 
     function addToBasket(){
-        var_dump($_POST);
         $id=F3::get('PARAMS.id');
         $organ=App::instance()->getOrgan($id);
         if(!$organ){
