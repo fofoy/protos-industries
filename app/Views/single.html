@@ -31,7 +31,7 @@
 							case "range": ?>
 								<li>
 									<p><?php echo $item->name ?> :</p>
-									<i class="icon-info-sign" original-title="This allows your brain to be much more resistant to mental disaster like Alzheimer’s desease."></i>
+									<i class="icon-info-sign" original-title="<?php echo $item->description ?>"></i>
 									<span class="characteristic_value"><?php echo $item->minvalue ?></span><span><?php echo $item->unit ?></span></p>
 									<span>-</span><input type="range" class="range" name="myRange"  title="<?php echo $item->name ?>" value="0"  min="<?php echo $item->minvalue ?>" max="<?php echo $item->maxvalue ?>" step="<?php echo $item->step ?>"><span>+</span>
 									<p class="atr_price">+ <span class="charac_price">0</span>$</p>

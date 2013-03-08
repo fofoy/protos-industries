@@ -6,7 +6,11 @@ body {
 	font-size: 62.5%;
 	background-color:#000;
 	font-family: 'Electrolize', sans-serif;
-	cursor: url(img/cursor.png), crosshair;
+	cursor: url(img/cursor.png), auto;
+}
+
+a{
+	cursor: url(img/cursor_hover.png), auto;
 }
 
 #wrapper{
@@ -354,7 +358,7 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 	width:600px;
 	height:100%;
 
-	cursor:pointer;
+	cursor:url(img/cursor_hover.png), auto;
 }
 #rotate_control{
 	display:block;
@@ -388,7 +392,7 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 	display: inline-block;
 	float:right;
 	margin-left:20px;
-	cursor: pointer;
+	cursor: url(img/cursor_hover.png), auto;
 
 	padding:5px;
 	color: #e6f4fc;
@@ -434,7 +438,7 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 }
 #organ_perso ul li i {
 	color:#9edff7;
-	cursor:pointer;
+	cursor:url(img/cursor_hover.png), auto;
 }
 
 .tooltip {
@@ -458,7 +462,7 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 	width: 100%;
 	padding: .5em .5em;
 	margin: 0 auto;
-	cursor: pointer;
+	cursor: url(img/cursor_hover.png), auto;
 	color: #e6f4fc;
 	background: #2a384e;
 	border: 1px solid #2a384e;
@@ -523,7 +527,7 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 	display: inline-block;
 	width: 50%;
 	margin: 0 auto;
-	cursor: pointer;
+	cursor: url(img/cursor_hover.png), auto;
 	color: #e6f4fc;
 	background: #2a384e;
 	border: 1px solid #2a384e;
@@ -634,7 +638,7 @@ nav ul li:nth-of-type(3):hover ~ #lavalamp {
 	padding: .5em .5em;
 	margin: 0 auto;
 	margin-top:15px;
-	cursor: pointer;
+	cursor: url(img/cursor_hover.png), auto;
 	color: #e6f4fc;
 	background: #2a384e;
 	border: 1px solid #2a384e;
