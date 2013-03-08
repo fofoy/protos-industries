@@ -45,11 +45,15 @@ class App_controller{
     }
 
     function sendMail(){
-        $mail=new SMTP(F3::get('smtp_host'),F3::get('smtp_port'),'SSL',F3::get('smtp_user'),F3::get('smtp_pw'));
-        $mail->set('from','<no-reply@protos.com>');
-        $mail->set('to','"Florian Quiblier" <florian.quiblier@gmail.com>');
-        $mail->set('subject','Coucou!');
-        $mail->send(Views::instance()->render('email.html'));
+        F3::set('from','<no-reply@mysite.com>');
+        F3::set('to','<maxime.debavelaere@gmail.com>');
+        F3::set('subject','Welcome');
+        ini_set('sendmail_from',F3::get('from'));
+        mail(
+            F3::get('to'),
+            F3::get('subject'),
+            Views::instance()->render('email.html')
+            );
     }
 
     function signup(){
